@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/2300032735/JENKINS-FULLSTACK-PRACTICE.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                dir('taskapi-react') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Build React App') {
+            steps {
+                dir('taskapi-react') {
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Archive Build Files') {
+            steps {
+                dir('taskapi-react/dist') {
+                    archiveArtifacts artifacts: '**', fingerprint: true
+                }
+            }
+        }
+    }
+}
