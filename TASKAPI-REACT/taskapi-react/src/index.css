@@ -1,0 +1,87 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #3b0a45; /* Dark purple text */
+  background-color: #ffe6f0; /* Baby pink background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #a259ff; /* Purple links */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #7a1fff; /* Darker purple on hover */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #7a1fff; /* Purple heading */
+}
+
+input {
+  padding: 0.5em;
+  border: 1px solid #d79aff;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-family: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffb3d9; /* Baby pink button */
+  color: #3b0a45; /* Purple text */
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: #a259ff; /* Purple border on hover */
+  background-color: #f8a6d4; /* Slightly darker pink on hover */
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #a259ff; /* Purple focus ring */
+}
+
+div {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #3b0a45;
+    background-color: #ffe6f0;
+  }
+  a:hover {
+    color: #7a1fff;
+  }
+  button {
+    background-color: #ffb3d9;
+  }
+}
